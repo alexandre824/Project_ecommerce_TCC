@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Cliente */
+    /* Login */
+        #corpo_form_login_cliente{
+            border: 1px solid  rgb(113, 190, 196);
+            /* border-radius: 50px; */
+            border-radius: 20px;
+            background-color: rgba(143, 174, 187, 0.955);
+            /* background-color: #00d4f0; */
+
+            width: 550px;
+            height: 560px;
+            margin: 150px auto 0px auto;
+        }
+    /* Cadastro */
+        #corpo_form_cad_cliente{
+            border: 1px solid  rgba(113, 190, 196, 0.955);
+            /* border-radius: 50px; */
+            border-radius: 20px;
+            background-color: rgb(143, 174, 187);
+            /* background-color: #00d4f0; */
+
+            width: 550px;
+            height: 670px;
+            margin: 100px auto 0px auto;
+        }
+    /* Geral Cliente */
+        #cliente{
+            background-image: url("../../imgs/_fundo_cliente.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            color: rgb(255, 255, 255);
+            font-family: arial;
+        }
+        div#corpo_form_login_cliente h1, div#corpo_form_cad_cliente h1{
+            text-align: center;
+            padding: 20px;
+        }
+        a{
+            display: block;
+            color: rgb(255, 253, 253);
+            text-decoration: none;
+            text-align: center;
+        }
+        a:hover{
+            color: purple;
+            text-decoration: underline;
+        }
+        input{
+            display: block;
+            height: 55px;
+            width: 400px;
+            margin: 10px auto 10px auto;
+            border-radius: 30px;
+            border:1px solid black;
+            font-size: 16pt;
+            padding: 5px 10px;
+            /* background-color: rgba(255, 255, 255, 0.315); */
+            background-color: white;
+            outline: none;
+        }
+        input#boton{
+            background-color: #00d4f0;
+            border: none;
+            display: block;
+            height: 55px;
+            width: 425px;
+            margin: 10px auto 10px auto;
+            font-size: 16pt;
+            cursor: pointer;
+        }
+        /* placeholders */
+            ::-webkit-input-placeholder {
+                color: black;
+            }
+            
+            :-moz-placeholder { /* Firefox 18- */
+                color: black;  
+            }
+            
+            ::-moz-placeholder {  /* Firefox 19+ */
+                color: black;  
+            }
+            
+            :-ms-input-placeholder {  
+                color: black;  
+            }
+/* Admin */
+
+        /* Login */
+        #corpo_form_login{
+            border: 1px solid  rgb(113, 190, 196);
+            /* border-radius: 50px; */
+            border-radius: 25px;
+            background-color: rgba(29, 59, 68, 0.955);
+            /* background-color: #00d4f0; */
+
+            width: 550px;
+            height: 560px;
+            margin: 150px auto 0px auto;
+        }
+    /* Cadastro */
+
+        #corpo_form_cad{
+            border: 1px solid  rgb(113, 190, 196);
+            /* border-radius: 50px; */
+            border-radius: 25px;
+            background-color: rgba(29, 59, 68, 0.955);
+            /* background-color: #00d4f0; */ 
+
+            width: 550px;
+            height: 670px;
+            margin: 100px auto 0px auto;
+        }
+
+    /* Geral Admin */
+        #admin{
+            background-image: url("../../imgs/_fundo_admin.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position-y: 10px;
+            /* background-color: black; */
+            color: rgb(255, 255, 255);
+            font-family: arial;
+        }
+        div#corpo_form_login h1, div#corpo_form_cad h1{
+            text-align: center;
+            padding: 20px;
+        }
+        a{
+            display: block;
+            color: rgb(255, 253, 253);
+            text-decoration: none;
+            text-align: center;
+        }
+        a:hover{
+            color: purple;
+            text-decoration: underline;
+        }
+
+        input{
+            display: block;
+            height: 55px;
+            width: 400px;
+            margin: 10px auto 10px auto;
+            border-radius: 30px;
+            border:1px solid black;
+            font-size: 16pt;
+            padding: 5px 10px;
+            /* background-color: rgba(255, 255, 255, 0.315); */
+            background-color: white;
+            outline: none;
+        }
+        input#boton{
+            background-color: #00d4f0;
+            border: none;
+            display: block;
+            height: 55px;
+            width: 425px;
+            margin: 10px auto 10px auto;
+            font-size: 16pt;
+            cursor: pointer;
+        }
+        /* placeholders */
+            ::-webkit-input-placeholder {
+                color: black;
+            }
+            
+            :-moz-placeholder { /* Firefox 18- */
+                color: black;  
+            }
+            
+            ::-moz-placeholder {  /* Firefox 19+ */
+                color: black;  
+            }
+            
+            :-ms-input-placeholder {  
+                color: black;  
+            }
+/* Geral */
+    div.msg-sucesso{
+        width: 400px;
+        margin: 10px auto;
+        padding: 10px;
+        background-color: rgba(71, 230, 177, 0.3);
+        border: 1px solid rgb(42, 165, 42);
+    }
+    div.msg-erro{
+        width: 400px;
+        margin: 10px auto;
+        padding: 10px;
+        background-color: rgba(230, 87, 71, 0.3);
+        border: 1px solid rgb(165,42,53);
+    }
+    #container{
+        /* background-color: red; */
+        display: block;
+        margin: 50px auto auto auto;
+    }
+
