@@ -5,3 +5,5 @@
  meus colegas Gustavo Souza, Henriky ALves e Eduardo Dantas.
 
  O site é feito utilizando para o seu visual em css o frameworke Bootstrap.
+
+ Adicionado pagina estaticas para o projeto para demostração do funcionamento das paginas e do site em si
