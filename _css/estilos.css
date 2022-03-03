@@ -1,0 +1,21 @@
+body {
+    min-width: 372px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+}
+
+.wrapper{
+    min-height: 100vh;
+}
+
+@media screen and (max-width: 469px) {
+    .mt-xs-3 {
+        margin-top: 1rem;
+    }
+}
+
+label:hover .text-dark {
+    transition: color 0.2s ease;
+    color: white !important;
+}
+
