@@ -14,11 +14,11 @@ class Usuario{
         }
     }
 
-    public function cadastrar($nome,$telefone,$email,$senha,$admin){
+    public function cadastrar($nome,$telefone,$email,$senha,$ad){
         global $pdo;
         global $msgErro;
         // Verificar se já existe cadastro
-        $sql = $pdo->prepare("SELECT id_usuario FROM usuarios WHERE email = {$email}");
+        $sql = $pdo->prepare("SELECT id FROM usuario WHERE email = {$email}");
         // $sql->bindValue(":e",$email);
         $sql->execute();
         if ($sql->rowCount()>0) {
@@ -28,7 +28,7 @@ class Usuario{
             // caso não, Cadastrar
             
             $sql = $pdo->prepare
-            ("INSERT INTO usuarios (nome,telefone,email,senha,administrador) VALUES ('$nome','$telefone','$email',md5('$senha'),'$admin')");
+            ("INSERT INTO usuario (nome,telefone,email,senha,ad) VALUES ('$nome','$telefone','$email','$senha','$admin')");
             // $sql->bindValue(":n",$nome);
             // $sql->bindValue(":t",$telefone);
             // $sql->bindValue(":e",$email);
@@ -47,7 +47,7 @@ class Usuario{
         global $pdo;
         global $msgErro;
         // Verificar se o email e senha estão cadastrados,se sim
-        $sql = $pdo->prepare("SELECT id_usuario FROM usuarios WHERE email like '$email' AND senha like md5('$senha');");
+        $sql = $pdo->prepare("SELECT id FROM usuario WHERE email like '$email' AND senha like '$senha';");
         // $sql->bindValue(":e",$email);
         // $sql->bindValue(":s",$senha);
         $sql->execute();
@@ -55,7 +55,27 @@ class Usuario{
             // Entrar no sistema (sessão)
             $dado = $sql->fetch();
             session_start();
-            $_SESSION['id_usuario'] = $dado['id_usuario'];
+            $_SESSION['id'] = $dado['id'];
+            return true; #Logado com sucesso
+        }
+        else{
+            return false;
+        }
+    }
+
+
+    public function Carrinho($id_prod){
+        global $pdo;
+        global $msgErro;
+        // Verificar se o email e senha estão cadastrados,se sim
+        $sql = $pdo->prepare("SELECT id_produto FROM produtos WHERE id_produto like '$id_prod';");
+        // $sql->bindValue(":e",$email);
+        // $sql->bindValue(":s",$senha);
+        $sql->execute();
+        if($sql->rowCount()>0){
+            // Entrar no sistema (sessão)
+            $dado = $sql->fetch();
+            $_SESSION['id_for_carrinho'] = $dado['id_produto'];
             return true; #Logado com sucesso
         }
         else{
